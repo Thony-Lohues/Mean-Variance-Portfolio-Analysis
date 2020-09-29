@@ -14,7 +14,10 @@ portfolios.columns
 '5 assets portfolio'
 portfolios_5 = portfolios[['Fin  ', 'Agric', 'Aero ', 'Chems', 'Hlth ']].loc['2015-07-01':'2020-06-01']
 
-def f_frontier(data, rf, short_selling, risk_free, n):
+
+def f_frontier(data, rf, short_selling, risk_free, n):                          #data = portfolios_5, rf = taux sans risque mensuelle
+                                                                                # Short_selling = 'oui' si on autorise la vente a decouvert 'non' sinon
+                                                                                # risk_free = 'oui' si on a acces a l'actif sans risque, 'non' sinon
     
     global mu_ss_rf, std_ss_rf, Z_bar, Sigma, A, B, C,delta , w_list
     
