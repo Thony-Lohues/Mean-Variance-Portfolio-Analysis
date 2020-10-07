@@ -1,0 +1,5 @@
+for i in range(0, 6):
+    df = portfolios_5
+    df = df.apply(lambda x: x.sample(frac=1, replace=True).values)
+    f_frontier(df, 0.01, "oui", "oui", 2000)
+    plt.plot(std_ss, mu_ss)
