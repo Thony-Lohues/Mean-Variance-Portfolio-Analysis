@@ -1,9 +1,0 @@
-# Proposez et implémentez une méthode pour démontrer l’effet de l’incertitude autour des paramètres estimés sur le «mean-variance efficient locus» 
-
-# Methode du Bootstrap
-
-for i in range(0, 6):
-    df = portfolios_5
-    df = df.apply(lambda x: x.sample(frac=1, replace=True).values)
-    f_frontier(df, 0.01, "oui", "oui", 2000)
-    plt.plot(std_ss, mu_ss)
